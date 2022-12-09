@@ -1,0 +1,32 @@
+
+img{
+    width: 100px;
+    height: 100px;
+    float: left;
+        
+}
+header b{
+    
+    color:#139729;
+   margin-left: 26%;
+   margin-top: 13%;
+    float: left;
+    font-size: 40px;
+    font-family: Hahmlet;
+}
+
+nav{
+    clear:both;
+}
+nav ul{
+    
+    font-family: Hahmlet;
+    text-align: center;
+    
+    
+}
+a {font-size: 25px}
+@font-face {
+    font-family:Hahmlet ;
+    src: url('Fonts/Martian_Mono/static/MartianMono/MartianMono-Bold.ttf');
+}

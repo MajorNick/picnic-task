@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        * {
+          box-sizing: border-box;
+        }
+        table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+        
+        #myInput {
+          background-image: url("search.png");
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+        .button {
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        .button2 {background-color: #008CBA;
+            
+        }
+        #myTable {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid #ddd;
+          font-size: 18px;
+        }
+        
+        #myTable th, #myTable td {
+          text-align: left;
+          padding: 12px;
+        }
+        
+        #myTable tr {
+          border-bottom: 1px solid #ddd;
+        }
+
+        
+        #myTable tr.header, #myTable tr:hover {
+          background-color: #f1f1f1;
+        }
+        </style>
+        </head>
+<body>
+  <form method="POST" action="/rawdata/filter.html">
+    <label>Filter With Segment Type</label><input name = "segment" type="text" value=""/>
+     
+    <input type="submit" value ="submit"/>
+    </form>
+
+  <form action="/rawdata.html" method = "POST">
+    <button class="button button2">Sort With Count</button>
+  </form>
+
+<table>
+    <tr>
+        <th>Question</th>
+        <th>Segment Type</th>
+        <th>Segment Description</th>
+        <th>Answer</th>
+        <th>Count</th>
+        <th>Percentage</th>
+    </tr>
+    {{ range .Items}}
+        <tr>
+            <td>{{ .Question }}</td>
+            <td>{{ .SegmentType }}</td>
+            <td>{{ .SegmentDesc }}</td>
+            <td>{{ .Answer }}</td>
+            <td>{{ .Count }}</td>
+            <td>{{ .Perc }}</td>
+        </tr>
+    {{ end}}
+</table>
+</body>
+</html>
