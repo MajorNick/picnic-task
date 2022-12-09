@@ -1,4 +1,4 @@
-#  data visualiozation with Golang,HTML and CSS
+#  Data visualization with Golang,HTML and CSS
 
 ## Features reading csv file, showing as a Row data, sort with specific value, and filter with specific values.
 ## also Showing pie chart of Most preferable app. 
